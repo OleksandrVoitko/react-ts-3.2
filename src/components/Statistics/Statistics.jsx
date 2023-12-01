@@ -1,12 +1,11 @@
-import { Component } from 'react';
-import { Wrapper } from './App.styled';
-
 import { Feedback } from 'components/Feedback/Feedback';
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Notification } from 'components/Notification/Notification';
 import { Section } from 'components/Section/Section';
+import { Component } from 'react';
+import { Wrapper } from './Statistics.styled';
 
-export class App extends Component {
+export class Statistics extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -14,6 +13,7 @@ export class App extends Component {
   };
 
   handleClick = ({ target: { name } }) => {
+    console.log(name);
     this.setState({ [name]: this.state[name] + 1 });
   };
   countTotalFeedback() {
