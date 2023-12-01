@@ -3,7 +3,6 @@ import { Btn } from './Button.styled';
 
 export class Button extends PureComponent {
   render() {
-    console.log('render');
     return (
       <Btn
         name={this.props.name}
